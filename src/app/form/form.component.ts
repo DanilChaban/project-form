@@ -18,14 +18,12 @@ export class FormComponent implements OnInit {
     password: ['',
       [Validators.required,
       Validators.minLength(6),
-      Validators.maxLength(11),
-        Validators.pattern('[A-Z]{1}')
+      Validators.maxLength(11)
     ]],
     confirmPassword: ['',
       [Validators.required,
       Validators.minLength(6),
-      Validators.maxLength(11),
-        Validators.pattern('[A-Z]{1}')
+      Validators.maxLength(11)
       ]]
   },
     {

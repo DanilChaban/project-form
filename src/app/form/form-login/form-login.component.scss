@@ -30,6 +30,13 @@ button {
   width: 450px;
 }
 
+button:hover {
+  background: linear-gradient(270deg, #FB6564 0%, #A03CEA 100%);
+  border-radius: 8px;
+  transform: scale(1.1);
+  transition: 1s;
+}
+
 .validators {
   color: #ff0000
 }

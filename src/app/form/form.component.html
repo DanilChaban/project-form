@@ -87,10 +87,6 @@
       <small *ngIf="form.get('confirmPassword')?.errors?.['confirmPasswordValidator']">
         Password and Confirm Password didn't match.
       </small>
-
-      <small *ngIf="form.get('confirmPassword')?.errors?.['pattern']">
-        Your password must have at least one capital letter
-      </small>
     </div>
 
   <button type="submit" mat-raised-button  [disabled]="form.invalid">Sign Up</button>

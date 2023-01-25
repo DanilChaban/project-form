@@ -47,3 +47,16 @@ button {
   cursor: pointer;
 }
 
+.remember-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.name-input {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+}

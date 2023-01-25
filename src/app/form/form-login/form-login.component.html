@@ -24,7 +24,7 @@
 
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
 
-  <p>Email</p>
+  <p class="name-input">Email</p>
   <mat-form-field appearance="outline">
     <input type="email" matInput formControlName="email"  placeholder="pls write email...">
   </mat-form-field>
@@ -38,7 +38,7 @@
     </small>
   </div>
 
-  <p>Password</p>
+  <p class="name-input">Password</p>
   <mat-form-field appearance="outline">
     <input type="password" matInput formControlName="password" placeholder="pls write password..." #password>
     <mat-icon
@@ -64,8 +64,10 @@
     </small>
   </div>
 
+    <div class="remember-container">
   <mat-checkbox (click)="remember()">Remember me</mat-checkbox>
   <p class="link-page" routerLink="/form/forgot-password">Forgot password?</p>
+  </div>
 
   <button mat-raised-button [disabled]="form.invalid">Login</button>
 </form>

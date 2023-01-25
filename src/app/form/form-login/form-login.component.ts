@@ -32,7 +32,7 @@ export class FormLoginComponent implements OnInit {
   }
 
   onSubmit(): void {
-    const formItem = {
+    const formItem: Form = {
       email: this.form.get('email')?.getRawValue(),
       password: this.form.get('password')?.getRawValue()
     }

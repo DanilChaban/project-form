@@ -1,0 +1,101 @@
+<div class="section-form-register">
+  <div class="background-listening">
+      <div class="title-text-container">
+        <h1>Digital</h1>
+        <h1>platform</h1>
+        <h1>for distance</h1>
+        <h1 class="black-color">listening.</h1>
+         <div class="text">
+          <p>You will never listen everything.</p>
+          <p>But you will listen more.</p>
+        </div>
+      </div>
+      </div>
+
+  <div class="form-register">
+
+<div class="form-title-container">
+    <h2 class="form-title">Listeningo</h2>
+  <div>
+    <h2 class="text-hello">Hey, Hello</h2>
+    <p>Enter your email and password to sign-up</p>
+  </div>
+</div>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <p class="name-input">Email</p>
+  <mat-form-field class="example-form-field" appearance="outline">
+    <input type="email" matInput formControlName="email" placeholder="pls write email...">
+  </mat-form-field>
+    <div *ngIf="form.get('email')?.invalid && form.get('email')?.touched" class="validators">
+      <small *ngIf="form.get('email')?.errors?.['required']">
+        The field email cannot be empty.
+      </small>
+
+      <small *ngIf="form.get('email')?.errors?.['email']">
+        Enter correct email.
+      </small>
+    </div>
+
+  <p  class="name-input">Password</p>
+  <mat-form-field class="example-form-field" appearance="outline">
+    <input type="password" matInput formControlName="password" placeholder="pls write password..." #password>
+    <mat-icon
+    style="cursor: pointer"
+    matSuffix
+    (mousedown)="password.type = 'text'"
+    (mouseup)="password.type = 'password'"
+    [inline]="true">
+      {{password.type === 'password' ? 'visibility_off' : 'visibility'}}
+    </mat-icon>
+  </mat-form-field>
+    <div class="validators" *ngIf="form.get('password')?.invalid && form.get('password')?.touched">
+      <small *ngIf="form.get('password')?.errors?.['required']">
+        The field password cannot be empty.
+      </small>
+
+      <small *ngIf="form.get('password')?.errors?.['minlength']">
+        The length must be at least. {{form.get('password')?.errors?.['minlength']?.['requiredLength']}}
+      </small>
+
+      <small *ngIf="form.get('password')?.errors?.['maxlength']">
+        The length must be no more. {{form.get('password')?.errors?.['maxlength']?.['requiredLength']}}
+      </small>
+
+      <small *ngIf="form.get('password')?.errors?.['pattern']">
+        Your password must have at least one capital letter.
+      </small>
+    </div>
+
+  <p  class="name-input">Confirm password</p>
+  <mat-form-field class="example-form-field" appearance="outline">
+    <input type="password" matInput formControlName="confirmPassword" placeholder="pls confirm password..." #confirmPassword>
+    <mat-icon
+      style="cursor: pointer"
+      matSuffix
+      (mousedown)="confirmPassword.type = 'text'"
+      (mouseup)="confirmPassword.type = 'password'"
+      [inline]="true">
+      {{confirmPassword.type === 'password' ? 'visibility_off' : 'visibility'}}
+    </mat-icon>
+  </mat-form-field>
+    <div *ngIf="form.get('confirmPassword')?.invalid && form.get('confirmPassword')?.touched" class="validators">
+      <small *ngIf="form.get('confirmPassword')?.errors?.['required']">
+        The field password cannot be empty.
+      </small>
+
+      <small *ngIf="form.get('confirmPassword')?.errors?.['confirmPasswordValidator']">
+        Password and Confirm Password didn't match.
+      </small>
+
+      <small *ngIf="form.get('confirmPassword')?.errors?.['pattern']">
+        Your password must have at least one capital letter
+      </small>
+    </div>
+
+  <button type="submit" mat-raised-button  [disabled]="form.invalid">Sign Up</button>
+</form>
+
+  <p class="link-page" routerLink="/form/form-login">Click if you already have an account</p>
+</div>
+</div>

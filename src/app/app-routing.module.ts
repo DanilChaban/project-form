@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {path: '', c}
+  {path: 'form', loadChildren: () => import('./form/form.module').then(m => m.FormModule)}
 ];
 
 @NgModule({

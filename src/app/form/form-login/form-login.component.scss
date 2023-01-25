@@ -1,0 +1,49 @@
+.section-form-login {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+h1 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 45%;
+}
+
+.black-color {
+  color: #000
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-register {
+  margin-top: 100px;
+}
+
+button {
+  width: 450px;
+}
+
+.validators {
+  color: #ff0000
+}
+
+.name-input {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+}
+
+.link-page-back, .link-page {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
